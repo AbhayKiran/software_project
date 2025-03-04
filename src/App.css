@@ -1,0 +1,220 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  background-color: #f8f9fa;
+}
+
+.bg-dark-custom {
+  background-color: #1a1a1a !important; /* Dark background like the image */
+  opacity: 0.9; /* Slight transparency */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.navbar {
+  padding: 0.5rem 0; /* Reduced padding for exact height */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff !important;
+  font-size: 0.9rem; /* Smaller text */
+  padding: 0.5rem 1rem; /* Adjusted padding */
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #00bfff !important; /* Cyan hover color to match arrows */
+}
+
+.navbar-dark .navbar-brand {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.text-cyan {
+  color: #00bfff !important; /* Exact cyan color for links and arrows */
+}
+
+.dropdown-toggle::after {
+  display: none; /* Remove default Bootstrap arrow */
+}
+
+.dropdown-toggle .bi-caret-down-fill {
+  font-size: 0.7rem; /* Smaller arrow */
+  margin-left: 5px;
+  color: #00bfff; /* Cyan arrow to match text */
+}
+
+.dropdown-menu {
+  background-color: #1a1a1a;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  min-width: 150px; /* Adjusted width */
+}
+
+.dropdown-item {
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #333;
+  color: #00bfff;
+}
+
+.navbar-dark .navbar-toggler-icon-custom {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.form-control-sm.bg-transparent {
+  background: transparent !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
+  opacity: 0.8;
+  height: 30px; /* Exact height from image */
+  font-size: 0.8rem; /* Smaller text */
+  padding: 0 10px; /* Reduced padding */
+  border-radius: 20px; /* Rounded edges */
+  position: relative; /* For positioning the search icon */
+}
+
+.form-control-sm.bg-transparent::placeholder {
+  color: #fff !important;
+  opacity: 0.7;
+}
+
+.form-control-sm.bg-transparent:focus {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: #fff !important;
+  box-shadow: none;
+}
+
+.input-group-text.bg-transparent {
+  background: transparent !important;
+  border: none !important;
+  color: #fff;
+  padding: 0;
+  position: absolute;
+  pointer-events: none; /* Prevent clicking on the icon */
+}
+
+.hero-section {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.login-section-hero {
+  background: transparent; /* Transparent background */
+  position: absolute;
+  bottom: 20px; /* Position at the bottom like the second image */
+  left: 0;
+  width: 100%;
+}
+
+.login-form-hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align left for slight shift */
+}
+
+.login-input-hero {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; /* Rounded edges like the image */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for a glossy look */
+  color: #fff;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.login-input-hero:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-button-hero {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; /* Rounded edges like the image */
+  background-color: #ff0000; /* Red button */
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.login-button-hero:hover {
+  background-color: #cc0000;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.7);
+}
+
+.subscription-section {
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .hero-section {
+    height: 50vh;
+  }
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+  .hero-section .lead {
+    font-size: 1rem;
+  }
+  .subscription-section .input-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .subscription-section .btn, .subscription-section .form-control {
+    width: 100%;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-control-sm {
+    max-width: 100px;
+  }
+  .login-input-hero, .login-button-hero {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .login-form-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .login-section-hero {
+    bottom: 10px; /* Adjust for mobile */
+  }
+}
